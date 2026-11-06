@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+<body>
+    <h1 id="heading">Welcome DOM Practice</h1>
+    <p id="message">I'm learning DOM manipulation!</p>
+    <button onclick="changecontent()">
+        Change Content
+    </button>
+    <script>
+        function changecontent() {
+            document.getElementById("heading").textContent = "DOM Manipulation is Fun!";
+            document.getElementById("message").textContent = "I can change the content of this page using JavaScript!";
+        }
+    </script>
+</body>
+</html>

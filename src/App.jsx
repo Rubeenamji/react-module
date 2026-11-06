@@ -1,34 +1,19 @@
+import Header from "./components/Header";
+import ProductCard from "./components/ProductCard";
+import Footer from "./components/Footer";
 
-import { useState } from "react";
-
-function App() {
-  const [page, setPage] = useState("Home");
-
-  return (
+function App(){
+  return(
     <div>
-      <h1>My First SPA</h1>
-
-      <nav>
-        <button onClick={() => setPage("Home")}>
-          Home
-        </button>
-
-        <button onClick={() => setPage("About")}>
-          About
-        </button>
-
-        <button onClick={() => setPage("Contact")}>
-          Contact
-        </button>
-      </nav>
-
-      <hr />
-
-      {page === "Home" && <h2>Welcome Home!</h2>}
-      {page === "About" && <h2>About Us</h2>}
-      {page === "Contact" && <h2>Contact Us</h2>}
+      <Header/>
+      <main>
+        <h2>Our Products</h2>
+        <ProductCard/>
+        <ProductCard/>
+        <ProductCard/>
+      </main>
+      <Footer/>
     </div>
   );
 }
-
 export default App;
