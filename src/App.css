@@ -12,3 +12,9 @@
   color:red;
   font-weight:bold;
 }
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+}

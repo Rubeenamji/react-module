@@ -1,5 +1,7 @@
 import StudentCard from "./components/StudentCard";
 import "./App.css";
+import Profile from "./components/Profile";
+import Card from "./components/Card.jsx"
 function App(){
   const students=[
     {id:1,
@@ -24,6 +26,7 @@ function App(){
   return(
     <>
     <header/>
+    <Profile/>
     <main>
       <h1>All students</h1>
       {students.map((student)=>(
@@ -38,6 +41,15 @@ function App(){
       ):(
         <p>{passedStudents.length} students passed the exam.</p>
       )}
+      <Card title="My Profile">
+        <p>Name:John Doe</p>
+        <p>Role:React Learner</p>
+      </Card>
+      <Card title="My Learning Goals">
+        <p>Master React</p>
+        <p>Build Full Stack Applications</p>
+        <p>Create a professional portfolio</p>
+      </Card>
     </main>
     </>
   );
