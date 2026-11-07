@@ -1,8 +1,9 @@
-function ProductCard(){
+function ProductCard({product}){
     return(
-        <div>
-            <h2>Laptop</h2>
-            <p>Price:$800</p>
+        <div className="product-card">
+            <h2>{product.name}</h2>
+            <p>Price:${product.price}</p>
+            <p>{product.description}</p>
             <button>Buy Now</button>
         </div>
     );

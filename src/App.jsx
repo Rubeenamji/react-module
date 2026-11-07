@@ -2,6 +2,7 @@ import StudentCard from "./components/StudentCard";
 import "./App.css";
 import Profile from "./components/Profile";
 import Card from "./components/Card.jsx"
+import ProductList from "./components/ProductList";
 function App(){
   const students=[
     {id:1,
@@ -50,6 +51,7 @@ function App(){
         <p>Build Full Stack Applications</p>
         <p>Create a professional portfolio</p>
       </Card>
+      <ProductList/>
     </main>
     </>
   );
