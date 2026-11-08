@@ -1,4 +1,4 @@
-function StudentCard({student}){
+function StudentCard({student,onSelect}){
     return(
         <div className="student-card">
             <h2>{student.name}</h2>
@@ -9,7 +9,7 @@ function StudentCard({student}){
             ):(
                 <p className="fail">Failed</p>
             )}
-
+            <button onClick={()=>onSelect(student.name)}>Select</button>
         </div>
     );
 }

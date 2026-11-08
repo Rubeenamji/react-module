@@ -3,7 +3,10 @@ import "./App.css";
 import Profile from "./components/Profile";
 import Card from "./components/Card.jsx"
 import ProductList from "./components/ProductList";
+import {useState} from "react";
 function App(){
+  const [selectedStudent,setSelectedStudent]=useState("");
+
   const students=[
     {id:1,
       name:"Rubeena",
@@ -21,7 +24,9 @@ function App(){
       marks:75
     }
   ];
-
+ function handleStudentSelect(name){
+    setSelectedStudent(name);
+ }
   const passedStudents=students.filter((student)=>student.marks>50);
 
   return(
@@ -34,8 +39,12 @@ function App(){
         <StudentCard
          key={student.id}
          student={student}
+         onSelect={handleStudentSelect}
         />
       ))}
+
+      <h2>Selected student:{selectedStudent||"none"}</h2>
+
       <h2>Passed Students: {passedStudents.length}</h2>
       {passedStudents.length===0?(
         <p>No students passed the exam.</p>
