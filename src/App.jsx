@@ -1,4 +1,16 @@
-import StudentCard from "./components/StudentCard";
+import Counter from "./Projects/Counter";
+function App(){
+  return(
+    <div>
+      <Counter/>
+    </div>
+  )
+}
+export default App;
+
+
+
+/*import StudentCard from "./components/StudentCard";
 import "./App.css";
 import Profile from "./components/Profile";
 import Card from "./components/Card.jsx"
@@ -89,9 +101,9 @@ function App(){
 }
 export default App;
 
-/*////////////////////////////
+/*////////////////////////////*/
 
-function App(){
+/*function App(){
   const isLoggedIn=false;
   
   return(
