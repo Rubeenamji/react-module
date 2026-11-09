@@ -4,9 +4,13 @@ import Profile from "./components/Profile";
 import Card from "./components/Card.jsx"
 import ProductList from "./components/ProductList";
 import {useState} from "react";
+import UserProfile from "./components/UserProfile";
+import StudentInput from "./components/StudentInput";
+import StudentDisplay from "./components/StudentDisplay";
+
 function App(){
   const [selectedStudent,setSelectedStudent]=useState("");
-
+  const [studentName,setStudentName]=useState("");
   const students=[
     {id:1,
       name:"Rubeena",
@@ -26,6 +30,10 @@ function App(){
   ];
  function handleStudentSelect(name){
     setSelectedStudent(name);
+ }
+
+ function handleNameChange(name){
+  setStudentName(name);
  }
   const passedStudents=students.filter((student)=>student.marks>50);
 
@@ -51,6 +59,15 @@ function App(){
       ):(
         <p>{passedStudents.length} students passed the exam.</p>
       )}
+      
+
+
+      <UserProfile
+        name="Rubeena"
+        age={35}
+        skills={["HTML","CSS","JavaScript","React"]}
+        isAvailable={true}
+      />
       <Card title="My Profile">
         <p>Name:John Doe</p>
         <p>Role:React Learner</p>
@@ -60,6 +77,11 @@ function App(){
         <p>Build Full Stack Applications</p>
         <p>Create a professional portfolio</p>
       </Card>
+
+      <h1>Student Information</h1>
+      <StudentInput onNameChange={handleNameChange}/>
+      <StudentDisplay name={studentName}/>
+      <h1>Product List</h1>
       <ProductList/>
     </main>
     </>
